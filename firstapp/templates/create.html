@@ -1,0 +1,16 @@
+<form action="/submitform/" method="POST" >
+    {% csrf_token %}
+    
+    <p>f_name<input type="text" name="f_name"><br></p>
+   <p> l_name<input type="text" name="l_name"><br></p>
+  
+<p> gender<input type="radio" name="gender" value="m">Male<input type="radio" name="gender" value="f">Female<br></p>
+<p> country<select name="country">
+        <option value="nepal">nepal</option>
+        <option value="india">india</option>
+        <option value="china">china</option>
+         
+    </select><br></p>
+    <p> city<input type="text" name="city"><br></p>
+<p> <input type="submit" name="submit" value="Submit"></p>
+</form>
