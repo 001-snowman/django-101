@@ -1,0 +1,15 @@
+<form action="/display_student/" method="POST" >
+    {% csrf_token %}
+    
+    <p>First Name<input type="text" name="fname"><br></p>
+    <p> Last Name<input type="text" name="lname"><br></p>
+  
+    <p> Gender<input type="radio" name="gender" value="m">Male<input type="radio" name="gender" value="f">Female<br></p>
+    <p> Country
+    <select name="country">
+        <option value="nepal">Nepal</option>
+        <option value="india">India</option>
+        <option value="china">China</option>        
+    </select><br></p>
+    <p> <input type="submit" value="Submit"></p>
+</form>

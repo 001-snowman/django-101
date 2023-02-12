@@ -1,37 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <blockquote>
-        <h1>Show Student</h1>
-        <table width="100%" border="1">
-            <tr>
-                <th>S.n</th>
-                <th>Full name</th>
-                <th>gender</th>
-                <th>Country</th>
-                <th>city</th>
-                <th>Action</td>
-            </tr>
+<table>
+    <tr>
+        <td width="90 px">S.N</td>
+        <td width="90 px">Full Name</td>
+        <td width="90 px">Gender</td>
+        <td width="90 px">Country</td>
+    </tr>
 
-            {% for student in studentsData %}
-
-            <tr>
-                <td>{{ forloop.counter}}</td>
-                <td>{{student.f_name }} {{student.l_name}}</td>
-                <td>{{student.gender}}</td>
-                <td>{{student.country}}</td>
-                <td>{{student.city}}</td>
-                <td> </td>
-            </tr>
-            {% endfor %}
-        </table>
-    </blockquote>
-    
-</body>
-</html>
+    {% for student in studentData %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{student.fname}} {{student.lname}}</td>
+        <td>{{student.gender}}</td>
+        <td>{{student.country}}</td>
+    </tr>
+    {% endfor %}
+</table>
