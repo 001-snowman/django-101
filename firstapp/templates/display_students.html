@@ -2,8 +2,10 @@
     <tr>
         <td width="90 px">S.N</td>
         <td width="90 px">Full Name</td>
-        <td width="90 px">Gender</td>
-        <td width="90 px">Country</td>
+        <td width= 90 px>Gender</td>
+        <td width= 90 px>Country</td>
+        <td width= 90 px>Delete</td>
+        <td width= 90 px>Update</td>
     </tr>
 
     {% for student in studentData %}
@@ -12,6 +14,16 @@
         <td>{{student.fname}} {{student.lname}}</td>
         <td>{{student.gender}}</td>
         <td>{{student.country}}</td>
+        <td>
+            <a href="{% url 'delete_student' student.id %}">
+                delete
+            </a>
+        </td>
+        <td>
+            <a href="{% url 'update_student' student.id %}">
+                update
+            </a>
+        </td>
     </tr>
     {% endfor %}
 </table>

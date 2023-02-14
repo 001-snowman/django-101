@@ -1,0 +1,15 @@
+<form action="" method="POST" >
+    {% csrf_token %}
+    
+    <p>First Name<input type="text" name="fname" value="{{studentData.fname}}"></p>
+    <p> Last Name<input type="text" name="lname" value="{{studentData.lname}}"></p>
+  
+    <p> Gender<input type="radio" name="gender" value="m" {% if studentData.gender == 'm' %} checked {% endif %}>Male<input type="radio" name="gender" value="f" {% if studentData.gender == 'f' %} checked {% endif %}>Female<br></p>
+    <p> Country
+    <select name="country">
+        <option value="nepal" {% if studentData.country == 'nepal' %} selected {% endif %}>Nepal</option>
+        <option value="india" {% if studentData.country == 'india' %} selected {% endif %}>India</option>
+        <option value="china" {% if studentData.country == 'china' %} selected {% endif %}>China</option>        
+    </select></p>
+    <p> <input type="submit" value="Update"></p>
+</form>
